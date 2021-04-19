@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="icons8-apple-arcade-48.ico" type="image/x-icon">
+    <meta charset="UTF-8"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=g_Nn35PNa1Bjzr-rj7SVcGJtdoTi9HsyXMUt2MPxwWIabg0LvSxaLIC8FLiRRCf2IqNdg4QfkrRQ03euvN2quSImCI32ZLtU4HEb0SKCJxKkUquP4ceLezL-duOnBSSg" charset="UTF-8"></script><style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+		<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/libs/jshashtable.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/gd.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/gd-splash-image.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/libs/rbush.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/inputmanager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/jsonmanager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/timemanager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/runtimeobject.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/profiler.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/runtimescene.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/scenestack.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/polygon.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/force.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/layer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/timer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/runtimegame.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/variable.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/variablescontainer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/oncetriggers.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/runtimebehavior.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/spriteruntimeobject.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/commontools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/runtimescenetools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/inputtools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/objecttools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/cameratools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/soundtools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/storagetools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/stringtools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/windowtools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/events-tools/networktools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/websocket-debugger-client/hot-reloader.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/websocket-debugger-client/websocket-debugger-client.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/pixi.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/pixi-filters-tools.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/runtimegame-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/runtimescene-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/layer-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/pixi-image-manager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/spriteruntimeobject-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/pixi-renderers/loadingscreen-pixi-renderer.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/howler-sound-manager/howler.min.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/howler-sound-manager/howler-sound-manager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/fontfaceobserver-font-manager/fontfaceobserver.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/fontfaceobserver-font-manager/fontfaceobserver-font-manager.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/Extensions/PlatformBehavior/platformruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="https://resources.gdevelop-app.com/GDJS-5.0.0-beta108/Runtime/Extensions/PlatformBehavior/platformerobjectruntimebehavior.js" crossorigin="anonymous"></script>
+	<script src="https://game-previews.gdevelop-app.com/1618827344003-158829/code0.js?gdCacheBurst=3919640709" crossorigin="anonymous"></script>
+	<script src="https://game-previews.gdevelop-app.com/1618827344003-158829/data.js?gdCacheBurst=3919640709" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        var game = new gdjs.RuntimeGame(gdjs.projectData, gdjs.runtimeGameOptions);
+
+        //Create a renderer
+        game.getRenderer().createStandardCanvas(document.body);
+
+        //Bind keyboards/mouse/touch events
+        game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(function() {
+            game.startGameLoop();
+        });
+    })();
+
+	</script>
+</body>
+</html>
